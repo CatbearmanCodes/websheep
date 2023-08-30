@@ -37,7 +37,9 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "_now:websheep": "cp apps/websheep/now.json dist/apps/websheep && now dist/apps/websheep",
-    "_now:websheep-api": "now --local-config apps/websheep-api/now.json"
+    "_now:websheep-api": "now --local-config apps/websheep-api/now.json",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -75,7 +77,8 @@
     "shortid": "^2.2.15",
     "swagger-ui-express": "^4.1.2",
     "yamljs": "^0.3.0",
-    "zone.js": "^0.10.2"
+    "zone.js": "^0.10.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.900.0-next.11",
@@ -106,5 +109,6 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "snyk": true
 }
